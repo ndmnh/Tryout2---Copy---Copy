@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        card_view:cardElevation="20dp"
+        card_view:cardBackgroundColor="#ffffff"
+        card_view:cardPreventCornerOverlap="true"
+        android:id="@+id/card_view_humidity"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        card_view:cardCornerRadius="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true"
+            >
+            <TextView
+                android:id="@+id/fragment_humidity_title"
+                android:textColor="#34495e"
+                android:background="#3498db"
+                android:typeface="monospace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="  Humidity"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:id="@+id/text_fragment_humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Humidity Level:"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:layout_below="@id/fragment_humidity_title"
+                />
+            <TextView
+                android:id="@+id/humidity_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="very very wet liao"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/fragment_humidity_title"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_menu_humidity"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

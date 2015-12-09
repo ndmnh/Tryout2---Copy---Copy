@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        card_view:cardElevation="20dp"
+        card_view:cardBackgroundColor="#ffffff"
+        card_view:cardPreventCornerOverlap="true"
+        android:id="@+id/card_view_profile"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        card_view:cardCornerRadius="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true"
+            >
+            <ImageView
+                android:id="@+id/settings_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/text_overview"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_menu_settings"
+                />
+            <TextView
+                android:textColor="#2c3e50"
+                android:background="#9b59b6"
+                android:typeface="monospace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="  Settings"
+                android:id="@+id/text_overview"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:id="@+id/text_current_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Status:"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:layout_below="@id/settings_icon"
+                />
+            <TextView
+                android:id="@+id/current_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connected"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:layout_below="@id/settings_icon"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                android:id="@+id/text_battery_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Battery Level:"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:layout_below="@id/text_current_status"
+                />
+            <TextView
+                android:id="@+id/battery_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="90%"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:layout_below="@id/current_status"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                android:id="@+id/text_sensor_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sensor Condition:"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:layout_below="@id/text_battery_level"
+                />
+            <TextView
+                android:id="@+id/sensor_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Working"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:layout_below="@id/battery_level"
+                android:layout_alignParentRight="true"
+                />
+
+            <ImageView
+                android:id="@+id/topleftpic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_menu_settings"/>
+
+        </RelativeLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="20dp"
+            android:src="@android:drawable/ic_popup_sync"
+            android:clickable="true"
+            android:onClick="CallRefresh"
+            />
+    </android.support.v7.widget.CardView>
+</FrameLayout>
